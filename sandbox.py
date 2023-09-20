@@ -27,7 +27,7 @@ print(data)
 docx2text("proposal.docx", "test.txt")
 """
 
-from langchain.document_loaders import PyPDFLoader
+#from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import PDFMinerPDFasHTMLLoader
 from bs4 import BeautifulSoup
 import re
@@ -37,9 +37,9 @@ from langchain.docstore.document import Document
 loader = PyPDFLoader("RCIP.pdf")
 pages = loader.load_and_split()
 """
-structured_file = "pdf2txt"
+structured_file = ".spyder-py3\pdf2txt_env"
 
-loader = PDFMinerPDFasHTMLLoader("RCIP.pdf")
+loader = PDFMinerPDFasHTMLLoader(".spyder-py3\RCIP.pdf")
 data = loader.load()[0]   # entire PDF is loaded as a single Document
 
 soup = BeautifulSoup(data.page_content,'html.parser')
