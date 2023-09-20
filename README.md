@@ -16,4 +16,5 @@
 7. Click on `Stage Changed` and then `Commit` to save file changes to the repo
 	- It'll probably yell at you about not being able to verify your identity and not having a commit message. Write your commit message in the designated box, and it'll give you instructions on how to verify your identity via Git Bash and github
 8. Click on `Push` and put the HTTPS link in `Destination Repository`
-	- ****DO NOT**** check `Force overwrite existing branch`. It does exactly what it says and will overwrite the entire github repo.
+	- ****DO NOT**** check `Force overwrite existing branch`. It does exactly what it says and will overwrite the entire github repo
+     - Hopefully this works, if not just upload everything to the github repo directly

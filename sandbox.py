@@ -13,9 +13,22 @@ handles structured formatting like tables and subsections
 # https://python.langchain.com/docs/integrations/document_loaders/microsoft_word
 
 from langchain.document_loaders import Docx2txtLoader
+import sys
+import os
 
-loader = Docx2txtLoader("proposal.docx")
-
-data = loader.load()
-
-print(data)
+def load_word_docx(filepath: str) -> str:
+    
+    # Import and load the ms word .docx file
+    # Raise an exception if the file can't be found
+    #try:
+    print(filepath)
+    filepath = os.path.abspath(filepath)
+    print(filepath)
+    loader = Docx2txtLoader(filepath)
+    #except:
+    print("ERROR - File not found")
+        #sys.exit()
+    data = loader.load()
+    print(data) 
+    
+    return data
