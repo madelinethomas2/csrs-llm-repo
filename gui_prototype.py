@@ -54,14 +54,14 @@ def start_gui():
     
     global cwdent
     
-    #chosenconfigs = [cwdent.get()]
-    #for inpoption in chosenconfigs:
-    #    if '\n' not in inpoption:
-    #        chosenconfigs[chosenconfigs.index(inpoption)] = inpoption + "\n"
-    #prevsetsw = open("./config.txt", "w")
-    #prevsetsw.writelines(chosenconfigs)
-    #prevsetsw.close()
-    #print(chosenconfigs)
+    chosenconfigs = [cwdent.get()]
+    for inpoption in chosenconfigs:
+        if '\n' not in inpoption:
+            chosenconfigs[chosenconfigs.index(inpoption)] = inpoption + "\n"
+    prevsetsw = open("./config.txt", "w")
+    prevsetsw.writelines(chosenconfigs)
+    prevsetsw.close()
+    print(chosenconfigs)
     
     string= "Parsing text..."
     print(string)
@@ -73,7 +73,7 @@ def start_gui():
     statuslab.configure(text=string2)
     statuslab.grid(row=3, column=1)
     
-    string3= prevsets[1]
+    string3= "hello i are a bad sentence"
     print(string3)
     statuslab2.configure(text=string3)
     statuslab2.grid(row=4, column=1)
